@@ -10,9 +10,13 @@ function calculateBill(idMenuTable) {
             // get the checkbox' parent table row
             var oTR = getParentTag(aCBTags[i], 'TR');
             // retrieve the price from the price column, which is the third column in the table
-            var oTDPrice = oTR.getElementsByTagName('TD')[2];
+            var oTDPrice = oTR.getElementsByTagName('TD')[3];
+            //if(bShowDiscount){ //apply 10% discount if the product has a discount option
+            //    fBillTotal += parseFloat(oTDPrice.firstChild.data)*0.9;
+            //}else{
             // the first child text node of the column contains the price
             fBillTotal += parseFloat(oTDPrice.firstChild.data);
+            //}
         };
     };
     // return the price as a decimal number with 2 decimal places
