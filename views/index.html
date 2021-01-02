@@ -65,6 +65,7 @@
                             <option value="3">Keyboard</option>
                         </select>
                         <input class="form-control mt-3" pattern="^[a-zA-Z\s]+" oninvalid="this.setCustomValidity(this.willValidate ? '' :'Item cannot contain numbers')" type="text" name="item" placeholder="Item" required>
+                         <input class="form-control mt-3" pattern="^[a-zA-Z\s]+" oninvalid="this.setCustomValidity(this.willValidate ? '' :'Item cannot contain numbers')" type="text" name="brand" placeholder="Brand" required>
                         <input class="form-control mt-3" type="number" step=".01" name="price" placeholder="Price" oninvalid="this.setCustomValidity(this.willValidate ? '' :'Please enter a price')" required>
                         <button type="submit" class="btn btn-primary btn-block mt-3">Submit</button>
                     </div>

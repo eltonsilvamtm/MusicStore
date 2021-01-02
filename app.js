@@ -62,7 +62,7 @@ router.post('/post/json', function (req, res) {
         xmlFileToJs('GuitarCenter.xml', function (err, result) {
             if (err) throw (err);
             
-            result.cafemenu.section[obj.sec_n].entree.push({'item': obj.item, 'price': obj.price});
+            result.cafemenu.section[obj.sec_n].entree.push({'item': obj.item, 'brand':obj.brand, 'price': obj.price});
 
             console.log(JSON.stringify(result, null, "  "));
 
