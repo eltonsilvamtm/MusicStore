@@ -61,11 +61,11 @@ $(function(){
 			url: 'https://8000-coffee-grasshopper-s7u4ufb3.ws-eu03.gitpod.io/products',
             type: 'POST',
             contentType:'application/json',
-            data: { 
+            data: JSON.stringify({ 
                 "brand": $('#brand').val(),
                 "item": $('#item').val(),
                 "price": $('#price').val(),
-                "category": $('#category').val()},
+                "category": $('#category').val()}),
 			cache: false,
 			success: function ()
 			{
